@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import EpisodeList from './EpisodeList';
-import { genreMapping } from './GenreMapping/genreMapping';
+import { genreMapping } from '../GenreMapping/genreMapping';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleFavorite } from '../favoritesSlice';
 import { RootState } from '../store';
@@ -92,7 +92,7 @@ const ShowDetail: React.FC = () => {
   // Check if episode is a favorite
   const isFavorite = (episodeId: string) => favorites.some(episode => episode.id === episodeId);
 
-  if (loading) return <div style={{ color: 'white' }}>Loading...</div>;
+  if (loading) return <div style={{ color: 'Blue', textAlign:'center', margin:'50px', fontSize:'bold' }}>Loading...</div>;
   if (error) return <div>{error}</div>;
 
   return (

@@ -1,5 +1,5 @@
 .show-carousel {
-    padding: 30px;
+    padding: 40px;
     background-color: #1e1c1c; 
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
@@ -10,7 +10,7 @@
   
   .carousel-item {
     position: relative;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(19, 19, 19, 0.3);
     transition: transform 0.3s ease-in-out;

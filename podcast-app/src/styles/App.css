@@ -15,7 +15,7 @@ a {
   color: #f4f0f0;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  border-radius: 100px;
+  border-radius: 7px;
     
   }
   button:hover {

@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../styles/ShowCarousel.css';
-import { genreMapping } from './GenreMapping/genreMapping';
+import { genreMapping } from '../GenreMapping/genreMapping';
 import icons from '../Icons/icons/0microphone .png';
 
 // Define the Show interface for type safety
@@ -41,7 +41,7 @@ const ShowCarousel: React.FC = () => {
   }, []);
 
   // Display loading or error message if needed
-  if (loading) return <div style={{ color: 'white' }}>Loading...</div>;
+  if (loading) return <div style={{ color: 'blue', margin:'40px', fontSize:'bold', textAlign:'center' }}>Loading...</div>;
   if (error) return <div>{error}</div>;
 
   // Slider settings
@@ -55,7 +55,7 @@ const ShowCarousel: React.FC = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
         },
@@ -71,7 +71,7 @@ const ShowCarousel: React.FC = () => {
         <img src={icons} alt="Podcast Icon" style={{maxWidth:'30px'}}/>Podcast</h1>
       </div>
       
-      <h2 style={{ color: 'white', fontWeight: 'bolder', fontSize:'19px'}}>Trending Shows</h2>
+      <h2 style={{ color: 'white', fontWeight: 'bolder', fontSize:'19px', marginTop:'0'}}>Trending Shows</h2>
       
       <Slider {...settings}>
         {shows.map((show) => (

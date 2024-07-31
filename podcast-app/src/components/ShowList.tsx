@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { format, parseISO, isValid } from 'date-fns';
 import Fuse from 'fuse.js';
-import { genreMapping } from './GenreMapping/genreMapping';
+import { genreMapping } from '../GenreMapping/genreMapping';
 import ShowCarousel from './ShowCarousel';
 import '../styles/ShowList.css';
 
@@ -42,12 +42,6 @@ const ShowList: React.FC = () => {
     fetchShows();
   }, []);
 
-  // Initialize Fuse.js instance
-  const fuse = new Fuse(shows, {
-    keys: ['title'],
-    includeScore: true
-  });
-
   // Handle search filter change
   const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFilter(e.target.value);
@@ -74,7 +68,7 @@ const ShowList: React.FC = () => {
   // Filter shows based on search and genre
   const filteredShows = sortedShows.filter((show) => {
     const matchesFilter = filter
-      ? fuse.search(filter).some(result => result.item.id === show.id)
+      ? new Fuse([show], { keys: ['title'] }).search(filter).length > 0
       : true;
     const matchesGenre = genreFilter
       ? show.genres?.includes(genreFilter)
@@ -82,7 +76,7 @@ const ShowList: React.FC = () => {
     return matchesFilter && matchesGenre;
   });
 
-  if (loading) return <div style={{ color: 'white' }}>Loading...</div>;
+  if (loading) return <div style={{ color: 'blue', margin:'40px', fontSize:'bold', textAlign:'center' }}>Loading...</div>;
   if (error) return <div>{error}</div>;
 
   return (
