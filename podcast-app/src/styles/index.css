@@ -1,0 +1,27 @@
+/* styles/index.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a35;
+  }
+  
+  #root {
+    padding: 0;
+  }
+  
+  @media (max-width: 600px) {
+    .episode-item, .favorite-item, .show-item {
+      flex: 1 1 100%;
+    }
+    
+    .show-image, .episode-item img {
+      max-width: 100px;
+    }
+  
+    .show-detail .show-image {
+      max-width: 150px;
+    }
+  }
+  

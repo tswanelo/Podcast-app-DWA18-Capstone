@@ -1,0 +1,51 @@
+.episode-list {
+  padding: 10px;
+}
+
+.episodes {
+  list-style: none;
+  padding: 0;
+}
+
+.episode-item {
+  margin-bottom: 15px;
+  border: 1px solid #333;
+  margin: 35px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #2b2b2b;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.episode-item:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+
+.addtofavorites-btn button {
+  background-color: #444;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.addtofavorites-btn img {
+  width: 20px;
+}
+
+
+.episode-item button {
+  padding: 8px 12px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.episode-item button:hover {
+  background-color:#c0392b;
+  transform: scale(1.05);
+}

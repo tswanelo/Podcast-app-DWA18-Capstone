@@ -1,0 +1,76 @@
+/* styles/ShowList.css */
+
+.show-list {
+  text-align: center;
+  margin: 1px;
+  padding: 10px;
+  background-color: #1a1a1a;
+}
+
+.shows {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+  margin: 10px 0;
+}
+
+.show-item {
+  border: 1px solid #333;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: #2b2b2b;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.show-item:hover {
+  transform: scale(1.05);
+  background-color: #444;
+}
+
+.show-info {
+  margin-top: 10px;
+  color: #ece5e5;
+}
+
+.show-image {
+  max-width: 97%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  
+}
+
+.showImage {
+    width: 100%;
+    max-width: 200px; 
+    height: auto; 
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+  
+  }
+
+  .showImage:hover {
+    transform: scale(1.13);
+  }
+
+
+.show-list input[type="text"],
+.show-list select,
+.show-list button {
+  padding: 10px;
+  border-radius: 15px;
+  border-color: #050505;
+  background-color: #333;
+  color: #ece5e5;
+}
+
+.show-list input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+.show-list button:hover {
+  background-color: #0d0d0d;
+}

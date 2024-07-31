@@ -1,0 +1,11 @@
+.AudioPlayer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  audio {
+    width: 100%;
+    max-width: 300px; /* Limit the size on larger screens */
+  }
+  

@@ -1,0 +1,26 @@
+/* styles/App.css */
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  h1, h2, h3, h4 {
+    color: #dfded7ea;
+  }
+  
+  button {
+  padding: 6px 10px;
+  background-color: #a7a39fd2;
+  color: #f4f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 100px;
+    
+  }
+  button:hover {
+    background-color: #080808;
+    transform: scale(1.05);
+  }
+
+ 
